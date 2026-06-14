@@ -5,24 +5,27 @@ import Image from "next/image";
 export default function Home() {
   return (
     <section className="relative w-full min-h-screen overflow-hidden bg-[#2563EB]">
-      {/* Background Large Typography */}
-      <div className="pointer-events-none absolute inset-0 select-none overflow-hidden">
-        <h1 className="absolute top-[10%] left-1/2 -translate-x-1/2 whitespace-nowrap text-[9vw] font-black uppercase leading-[0.9] tracking-tighter text-white">
+      {/* Background Large Typography - Single Heading */}
+      <h1 className="pointer-events-none absolute inset-0 select-none overflow-hidden text-[9vw] font-black uppercase leading-[0.88] tracking-tighter text-white">
+        <span className="absolute top-[10%] left-1/2 -translate-x-1/2 whitespace-nowrap">
           THE ART OF
-        </h1>
-        <h1 className="absolute top-[22%] left-1/2 -translate-x-1/2 whitespace-nowrap text-[10vw] font-black uppercase leading-[0.9] tracking-tighter text-white">
-          SEEING THE
-        </h1>
-        <h1 className="absolute top-[34%] left-1/2 -translate-x-1/2 whitespace-nowrap text-[11vw] font-black uppercase leading-[0.9] tracking-tighter text-white">
-          WORLD
-        </h1>
-        <h1 className="absolute bottom-[24%] left-1/2 -translate-x-1/2 whitespace-nowrap text-[9vw] font-black uppercase leading-[0.9] tracking-tighter text-white">
+        </span>
+        <span className="absolute top-[24%] left-[8%] whitespace-nowrap">
+          SEEING
+        </span>
+        <span className="absolute top-[24%] right-[8%] whitespace-nowrap">
+          THE WORLD
+        </span>
+        <span className="absolute bottom-[22%] left-[5%] whitespace-nowrap">
           CAPTURING
-        </h1>
-        <h1 className="absolute bottom-[10%] left-1/2 -translate-x-1/2 whitespace-nowrap text-[8.5vw] font-black uppercase leading-[0.9] tracking-tighter text-white">
+        </span>
+         <span className="absolute bottom-[22%] right-[5%] whitespace-nowrap">
+          Moments
+        </span>
+        <span className="absolute bottom-[10%] left-1/2 -translate-x-1/2 whitespace-nowrap">
           THAT LAST
-        </h1>
-      </div>
+        </span>
+      </h1>
 
       {/* Top Left Tagline */}
       <div className="absolute top-28 left-6 z-30 sm:top-32 sm:left-8 md:top-36 md:left-12">
