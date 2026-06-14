@@ -29,7 +29,7 @@ export default function RootLayout({
       lang="en"
       className={`${syne.variable} ${inter.variable} antialiased`}
     >
-      <body className="min-h-screen bg-background text-foreground">
+      <body className="min-h-screen flex flex-col bg-background text-foreground">
         {children}
       </body>
     </html>

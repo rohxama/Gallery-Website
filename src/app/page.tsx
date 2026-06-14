@@ -5,7 +5,9 @@ export default function Home() {
   return (
     <>
       <Header />
-      <HeroSection />
+      <main className="flex-1">
+        <HeroSection />
+      </main>
     </>
   );
 }

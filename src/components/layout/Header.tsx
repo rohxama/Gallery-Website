@@ -33,24 +33,21 @@ export function Header() {
           : "bg-transparent"
       }`}
     >
-      {/* Main Header Row */}
-      <div className="max-w-[1400px] mx-auto px-6 sm:px-8 lg:px-12">
-        <div className="flex items-center justify-between h-20">
-          {/* Left: Logo */}
+      <div className="w-full max-w-[1200px] mx-auto px-6 sm:px-8 md:px-10 lg:px-12">
+        <div className="flex items-center justify-between h-16 sm:h-[72px] md:h-20">
           <Link
             href="/"
-            className="heading-font text-lg sm:text-xl font-semibold tracking-[0.25em] uppercase text-foreground"
+            className="heading-font text-base sm:text-lg md:text-xl font-semibold tracking-[0.25em] uppercase text-foreground shrink-0"
           >
             Gallery
           </Link>
 
-          {/* Center: Navigation (hidden on mobile) */}
-          <nav className="hidden lg:flex items-center gap-10">
+          <nav className="hidden lg:flex items-center gap-8 xl:gap-10">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-[11px] font-medium uppercase tracking-[0.2em] text-muted hover:text-foreground transition-colors duration-300 relative group"
+                className="text-[10px] sm:text-[11px] font-medium uppercase tracking-[0.2em] text-muted hover:text-foreground transition-colors duration-300 relative group whitespace-nowrap"
               >
                 {link.label}
                 <span className="absolute -bottom-1 left-0 w-0 h-[1px] bg-primary group-hover:w-full transition-all duration-300" />
@@ -58,8 +55,7 @@ export function Header() {
             ))}
           </nav>
 
-          {/* Right: Icons + Contact */}
-          <div className="flex items-center gap-5">
+          <div className="flex items-center gap-4 sm:gap-5 shrink-0">
             <button
               className="text-muted hover:text-foreground transition-colors duration-300"
               aria-label="Search"
@@ -69,28 +65,22 @@ export function Header() {
 
             <Link
               href="/contact"
-              className="hidden sm:inline-block px-5 py-2 text-[11px] font-medium uppercase tracking-[0.15em] border border-primary/40 text-primary hover:bg-primary hover:text-background transition-all duration-300"
+              className="hidden sm:inline-block px-4 md:px-5 py-2 text-[10px] sm:text-[11px] font-medium uppercase tracking-[0.15em] border border-primary/40 text-primary hover:bg-primary hover:text-background transition-all duration-300"
             >
               Contact
             </Link>
 
-            {/* Mobile Menu Toggle */}
             <button
               onClick={() => setMobileOpen(!mobileOpen)}
               className="lg:hidden text-muted hover:text-foreground transition-colors"
               aria-label="Toggle menu"
             >
-              {mobileOpen ? (
-                <X className="w-5 h-5" />
-              ) : (
-                <Menu className="w-5 h-5" />
-              )}
+              {mobileOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
             </button>
           </div>
         </div>
       </div>
 
-      {/* Mobile Menu */}
       <AnimatePresence>
         {mobileOpen && (
           <motion.div
@@ -100,7 +90,7 @@ export function Header() {
             transition={{ duration: 0.3 }}
             className="lg:hidden bg-surface/95 backdrop-blur-xl border-b border-border overflow-hidden"
           >
-            <nav className="max-w-[1400px] mx-auto px-6 py-6 flex flex-col gap-5">
+            <nav className="w-full max-w-[1200px] mx-auto px-6 sm:px-8 py-6 flex flex-col gap-5">
               {navLinks.map((link, i) => (
                 <motion.div
                   key={link.href}
