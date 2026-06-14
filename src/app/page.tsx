@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <section className="relative w-full min-h-screen overflow-hidden bg-[#2563EB]">
       {/* Background Large Typography - Single Heading */}
-      <h1 className="pointer-events-none absolute inset-0 select-none overflow-hidden text-[9vw] font-black uppercase leading-[0.88] tracking-tighter text-white">
+      <h1 className="pointer-events-none absolute inset-0 select-none overflow-hidden font-[var(--font-oswald)] text-[9vw] font-bold uppercase leading-[0.88] tracking-tight text-white">
         <span className="absolute top-[10%] left-1/2 -translate-x-1/2 whitespace-nowrap">
           THE ART OF
         </span>
@@ -18,9 +18,6 @@ export default function Home() {
         </span>
         <span className="absolute bottom-[22%] left-[5%] whitespace-nowrap">
           CAPTURING
-        </span>
-         <span className="absolute bottom-[22%] right-[5%] whitespace-nowrap">
-          Moments
         </span>
         <span className="absolute bottom-[10%] left-1/2 -translate-x-1/2 whitespace-nowrap">
           THAT LAST
@@ -39,7 +36,9 @@ export default function Home() {
 
       {/* Top Right Year */}
       <div className="absolute top-28 right-6 z-30 sm:top-32 sm:right-8 md:top-36 md:right-12">
-        <span className="text-xs font-semibold text-white">2026</span>
+        <span className="font-[var(--font-oswald)] text-xs font-semibold text-white">
+          2026
+        </span>
       </div>
 
       {/* Center Overlapping Photos */}
@@ -122,7 +121,7 @@ export default function Home() {
 
       {/* Right Side Text */}
       <div className="absolute top-[42%] right-6 z-30 sm:right-8 md:right-12">
-        <p className="mb-1 text-[10px] font-medium text-white sm:text-xs">
+        <p className="mb-1 font-[var(--font-oswald)] text-[10px] font-medium text-white sm:text-xs">
           Memories
         </p>
         <p className="text-[8px] font-bold uppercase tracking-[0.15em] text-white sm:text-[9px]">

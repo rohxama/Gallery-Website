@@ -1,12 +1,18 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Oswald, Inter } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/Header";
+
+const oswald = Oswald({
+  variable: "--font-oswald",
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+});
 
 const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800", "900"],
+  weight: ["400", "500", "600"],
 });
 
 export const metadata: Metadata = {
@@ -21,7 +27,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="overflow-x-hidden">
-      <body className="min-h-screen w-full overflow-x-hidden bg-background font-[var(--font-inter)] text-white">
+      <body className="min-h-screen w-full overflow-x-hidden bg-[#2563EB] font-[var(--font-inter)] text-white">
         <Header />
         <main className="w-full">{children}</main>
       </body>
