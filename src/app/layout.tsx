@@ -1,22 +1,22 @@
 import type { Metadata } from "next";
-import { Bebas_Neue, Inter } from "next/font/google";
+import { Syne, Inter } from "next/font/google";
 import "./globals.css";
 
-const bebasNeue = Bebas_Neue({
-  variable: "--font-bebas-neue",
+const syne = Syne({
+  variable: "--font-syne",
   subsets: ["latin"],
-  weight: "400",
+  weight: ["400", "500", "600", "700", "800"],
 });
 
 const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
+  weight: ["400", "500", "600"],
 });
 
 export const metadata: Metadata = {
-  title: "PhotoGallery",
-  description: "The Art of Seeing the World — Capturing Moments That Last",
+  title: "Gallery",
+  description: "Photography Gallery",
 };
 
 export default function RootLayout({
@@ -27,7 +27,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${bebasNeue.variable} ${inter.variable} antialiased`}
+      className={`${syne.variable} ${inter.variable} antialiased`}
     >
       <body className="min-h-screen bg-background text-foreground">
         {children}

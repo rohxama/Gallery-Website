@@ -1,11 +1,17 @@
 @import "tailwindcss";
 
 @theme inline {
-  --color-background: #2563EB;
-  --color-foreground: #FFFFFF;
-  --color-muted: rgba(255, 255, 255, 0.7);
+  --color-background: #0B0B0B;
+  --color-foreground: #F5F1E8;
+  --color-primary: #C8A96B;
+  --color-primary-light: #d4b87a;
+  --color-primary-dark: #A97142;
+  --color-muted: #A8A29E;
+  --color-surface: #141414;
+  --color-card: #1C1C1C;
+  --color-border: rgba(255,255,255,0.08);
   --font-sans: var(--font-inter);
-  --font-display: var(--font-bebas-neue);
+  --font-heading: var(--font-syne);
 }
 
 * {
@@ -26,26 +32,10 @@ body {
 }
 
 ::selection {
-  background: #FFFFFF;
-  color: #2563EB;
+  background: var(--color-primary);
+  color: var(--color-background);
 }
 
-.display-font {
-  font-family: var(--font-display), "Bebas Neue", sans-serif;
-}
-
-.label-text {
-  font-size: 0.625rem;
-  font-weight: 600;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  line-height: 1.5;
-}
-
-.label-text-bold {
-  font-size: 0.625rem;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  line-height: 1.6;
+.heading-font {
+  font-family: var(--font-heading), "Syne", sans-serif;
 }
