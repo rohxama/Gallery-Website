@@ -15,7 +15,7 @@ export default function Home() {
     tl.fromTo(
       centerPhotoRef.current,
       { opacity: 0, y: -120, scale: 0.9 },
-      { opacity: 1, y: 0, scale: 1, duration: 1.2 }
+      { opacity: 1, y: 0, scale: 1, duration: 1.2, }
     )
       .fromTo(
         leftPhotoRef.current,
