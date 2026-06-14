@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useEffect } from "react";
+import { useRef, useLayoutEffect } from "react";
 import Image from "next/image";
 import gsap from "gsap";
 
@@ -9,26 +9,46 @@ export default function Home() {
   const leftPhotoRef = useRef<HTMLDivElement>(null);
   const rightPhotoRef = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
-    const tl = gsap.timeline({ defaults: { ease: "power3.out", duration: 1 } });
-
-    tl.fromTo(
+  useLayoutEffect(() => {
+    const els = [
       centerPhotoRef.current,
-      { opacity: 0, y: -120, scale: 0.9 },
-      { opacity: 1, y: 0, scale: 1, duration: 1.2, }
-    )
-      .fromTo(
-        leftPhotoRef.current,
-        { opacity: 0, y: -120, scale: 0.9 },
-        { opacity: 1, y: 0, scale: 1, duration: 1 },
-        "-=0.5"
-      )
-      .fromTo(
-        rightPhotoRef.current,
-        { opacity: 0, y: -120, scale: 0.9 },
-        { opacity: 1, y: 0, scale: 1, duration: 1 },
-        "-=0.5"
-      );
+      leftPhotoRef.current,
+      rightPhotoRef.current,
+    ].filter(Boolean) as HTMLDivElement[];
+
+    gsap.set(els, {
+      opacity: 0,
+      y: -50,
+      scale: 0.95,
+    });
+
+    const tl = gsap.timeline({
+      defaults: { ease: "power2.out" },
+    });
+
+    tl.to(centerPhotoRef.current, {
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      duration: 1,
+      delay: 1,
+    })
+      .to(leftPhotoRef.current, {
+        opacity: 1,
+        y: 0,
+        scale: 1,
+        duration: 1,
+      }, "-=0.4")
+      .to(rightPhotoRef.current, {
+        opacity: 1,
+        y: 0,
+        scale: 1,
+        duration: 1,
+      }, "-=0.4");
+
+    return () => {
+      tl.kill();
+    };
   }, []);
 
   return (
