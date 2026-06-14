@@ -7,25 +7,25 @@ export default function Home() {
     <section className="relative w-full min-h-screen overflow-hidden bg-[#2563EB]">
       {/* Background Large Typography */}
       <div className="pointer-events-none absolute inset-0 select-none overflow-hidden">
-        <h1 className="absolute top-[8%] left-1/2 -translate-x-1/2 whitespace-nowrap text-[12vw] font-black uppercase leading-[0.85] tracking-tighter text-white">
+        <h1 className="absolute top-[10%] left-1/2 -translate-x-1/2 whitespace-nowrap text-[9vw] font-black uppercase leading-[0.9] tracking-tighter text-white">
           THE ART OF
         </h1>
-        <h1 className="absolute top-[22%] left-1/2 -translate-x-1/2 whitespace-nowrap text-[13vw] font-black uppercase leading-[0.85] tracking-tighter text-white">
+        <h1 className="absolute top-[22%] left-1/2 -translate-x-1/2 whitespace-nowrap text-[10vw] font-black uppercase leading-[0.9] tracking-tighter text-white">
           SEEING THE
         </h1>
-        <h1 className="absolute top-[36%] left-1/2 -translate-x-1/2 whitespace-nowrap text-[14vw] font-black uppercase leading-[0.85] tracking-tighter text-white">
+        <h1 className="absolute top-[34%] left-1/2 -translate-x-1/2 whitespace-nowrap text-[11vw] font-black uppercase leading-[0.9] tracking-tighter text-white">
           WORLD
         </h1>
-        <h1 className="absolute bottom-[22%] left-1/2 -translate-x-1/2 whitespace-nowrap text-[12vw] font-black uppercase leading-[0.85] tracking-tighter text-white">
+        <h1 className="absolute bottom-[24%] left-1/2 -translate-x-1/2 whitespace-nowrap text-[9vw] font-black uppercase leading-[0.9] tracking-tighter text-white">
           CAPTURING
         </h1>
-        <h1 className="absolute bottom-[8%] left-1/2 -translate-x-1/2 whitespace-nowrap text-[11vw] font-black uppercase leading-[0.85] tracking-tighter text-white">
+        <h1 className="absolute bottom-[10%] left-1/2 -translate-x-1/2 whitespace-nowrap text-[8.5vw] font-black uppercase leading-[0.9] tracking-tighter text-white">
           THAT LAST
         </h1>
       </div>
 
       {/* Top Left Tagline */}
-      <div className="absolute top-24 left-6 z-30 sm:top-28 sm:left-8 md:left-12">
+      <div className="absolute top-28 left-6 z-30 sm:top-32 sm:left-8 md:top-36 md:left-12">
         <p className="text-[9px] font-bold uppercase tracking-[0.2em] text-white sm:text-[10px]">
           Where Every Click
         </p>
@@ -35,12 +35,12 @@ export default function Home() {
       </div>
 
       {/* Top Right Year */}
-      <div className="absolute top-24 right-6 z-30 sm:top-28 sm:right-8 md:right-12">
-        <span className="text-xs font-semibold text-white">2025</span>
+      <div className="absolute top-28 right-6 z-30 sm:top-32 sm:right-8 md:top-36 md:right-12">
+        <span className="text-xs font-semibold text-white">2026</span>
       </div>
 
       {/* Center Overlapping Photos */}
-      <div className="absolute inset-0 flex items-center justify-center pt-16 md:pt-0">
+      <div className="absolute inset-0 flex items-center justify-center pt-20 md:pt-12">
         <div className="relative h-[350px] w-[300px] sm:h-[420px] sm:w-[360px] md:h-[480px] md:w-[420px]">
           {/* Photo 1 - Back left */}
           <div

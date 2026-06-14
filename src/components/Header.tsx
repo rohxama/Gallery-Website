@@ -15,7 +15,7 @@ export function Header() {
 
   return (
     <header className="absolute top-0 left-0 z-50 w-full">
-      <div className="mx-auto flex h-16 w-full max-w-7xl items-center justify-between px-6 md:h-20">
+      <div className="mx-auto flex h-20 w-full max-w-7xl items-center justify-between px-6 md:h-24">
         <Link
           href="/"
           className="shrink-0 text-base font-bold tracking-tight text-white md:text-lg"
