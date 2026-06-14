@@ -42,34 +42,31 @@ export function AboutPreview() {
   }, []);
 
   return (
-    <section
-      ref={sectionRef}
-      className="py-24 bg-surface"
-    >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+    <section ref={sectionRef} className="py-32 bg-surface">
+      <div className="max-w-[1400px] mx-auto px-6 sm:px-8 lg:px-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.9 }}
           >
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              About the <span className="text-primary">Artist</span>
+            <span className="inline-block text-xs font-semibold uppercase tracking-[0.4em] text-primary mb-6">
+              About
+            </span>
+            <h2 className="heading-font text-4xl md:text-5xl lg:text-6xl font-extrabold mb-8 tracking-[-0.03em]">
+              The <span className="text-gradient">Artist</span>
             </h2>
-            <p className="text-muted mb-6 leading-relaxed">
-              With over a decade of experience in professional photography,
-              I specialize in capturing the raw beauty of landscapes, the
+            <p className="text-muted mb-6 leading-relaxed text-lg">
+              With over a decade of experience in professional photography, I
+              specialize in capturing the raw beauty of landscapes, the
               authenticity of portraits, and the energy of street life.
             </p>
-            <p className="text-muted mb-8 leading-relaxed">
+            <p className="text-muted mb-10 leading-relaxed">
               My approach combines technical precision with artistic vision,
-              creating images that not only document moments but evoke emotions.
-              Every photograph is a story waiting to be told.
+              creating images that not only document moments but evoke deep
+              emotions. Every photograph is a story waiting to be told.
             </p>
-            <a
-              href="/about"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-background rounded-full font-medium hover:bg-primary-light transition-colors"
-            >
+            <a href="/about" className="btn-primary">
               Learn More
             </a>
           </motion.div>
@@ -77,8 +74,8 @@ export function AboutPreview() {
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="grid grid-cols-2 gap-6"
+            transition={{ duration: 0.9, delay: 0.2 }}
+            className="grid grid-cols-2 gap-5"
           >
             {stats.map((stat, index) => (
               <motion.div
@@ -86,16 +83,18 @@ export function AboutPreview() {
                 initial={{ opacity: 0, y: 30 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.6, delay: 0.3 + index * 0.1 }}
-                className="p-6 bg-background rounded-xl text-center"
+                className="p-8 bg-card rounded-2xl text-center border border-white/[0.05] hover:border-primary/20 transition-colors duration-500"
               >
-                <stat.icon className="w-8 h-8 text-primary mx-auto mb-3" />
+                <stat.icon className="w-8 h-8 text-primary mx-auto mb-4" />
                 <div
-                  className="stat-number text-3xl font-bold mb-1"
+                  className="stat-number heading-font text-3xl font-bold mb-2 text-gradient"
                   data-value={stat.value}
                 >
                   0
                 </div>
-                <div className="text-muted text-sm">{stat.label}</div>
+                <div className="text-muted text-xs uppercase tracking-widest">
+                  {stat.label}
+                </div>
               </motion.div>
             ))}
           </motion.div>
