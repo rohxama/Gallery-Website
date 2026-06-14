@@ -4,16 +4,16 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <section className="relative w-full min-h-screen overflow-hidden bg-[#2563EB]">
+    <section className="relative w-full min-h-screen overflow-hidden bg-[#2563EB] pt-28 md:pt-32">
       {/* Background Large Typography - Single Heading */}
       <h1 className="pointer-events-none absolute inset-0 select-none overflow-hidden font-[var(--font-oswald)] text-[9vw] font-bold uppercase leading-[0.88] tracking-tight text-white">
-        <span className="absolute top-[10%] left-1/2 -translate-x-1/2 whitespace-nowrap">
+        <span className="absolute top-[12%] left-1/2 -translate-x-1/2 whitespace-nowrap">
           THE ART OF
         </span>
-        <span className="absolute top-[24%] left-[8%] whitespace-nowrap">
+        <span className="absolute top-[26%] left-[8%] whitespace-nowrap">
           SEEING
         </span>
-        <span className="absolute top-[24%] right-[8%] whitespace-nowrap">
+        <span className="absolute top-[26%] right-[8%] whitespace-nowrap">
           THE WORLD
         </span>
         <span className="absolute bottom-[22%] left-[5%] whitespace-nowrap">
@@ -25,7 +25,7 @@ export default function Home() {
       </h1>
 
       {/* Top Left Tagline */}
-      <div className="absolute top-28 left-6 z-30 sm:top-32 sm:left-8 md:top-36 md:left-12">
+      <div className="absolute top-32 left-6 z-30 sm:top-36 sm:left-8 md:top-40 md:left-12">
         <p className="text-[9px] font-bold uppercase tracking-[0.2em] text-white sm:text-[10px]">
           Where Every Click
         </p>
@@ -35,7 +35,7 @@ export default function Home() {
       </div>
 
       {/* Top Right Year */}
-      <div className="absolute top-28 right-6 z-30 sm:top-32 sm:right-8 md:top-36 md:right-12">
+      <div className="absolute top-32 right-6 z-30 sm:top-36 sm:right-8 md:top-40 md:right-12">
         <span className="font-[var(--font-oswald)] text-xs font-semibold text-white">
           2026
         </span>
