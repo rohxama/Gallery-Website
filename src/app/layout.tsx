@@ -19,10 +19,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="overflow-x-hidden">
       <body className="min-h-screen bg-white font-[var(--font-inter)] text-gray-900 antialiased">
-        <Header />
-        <main>{children}</main>
+        <div className="mx-auto w-full max-w-[100vw] overflow-x-hidden">
+          <Header />
+          <main className="w-full">{children}</main>
+        </div>
       </body>
     </html>
   );
