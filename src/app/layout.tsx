@@ -14,21 +14,12 @@ const syne = Syne({
 const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
+  weight: ["400", "500", "600"],
 });
 
 export const metadata: Metadata = {
-  title: "PhotoGallery | Luxury Photography",
-  description:
-    "A premium photography gallery showcasing stunning landscapes, portraits, and editorial photography with a luxury aesthetic.",
-  keywords: [
-    "photography",
-    "gallery",
-    "luxury",
-    "editorial",
-    "landscapes",
-    "portraits",
-  ],
+  title: "PhotoGallery",
+  description: "Photography portfolio",
 };
 
 export default function RootLayout({
@@ -37,14 +28,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="en"
-      className={`${syne.variable} ${inter.variable} antialiased`}
-    >
-      <body className="min-h-screen bg-background text-foreground">
+    <html lang="en" className={`${syne.variable} ${inter.variable}`}>
+      <body>
         <SmoothScroll>
           <Navbar />
-          <main className="flex-1">{children}</main>
+          <main>{children}</main>
           <Footer />
         </SmoothScroll>
       </body>
