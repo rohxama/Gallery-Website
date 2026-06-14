@@ -10,7 +10,7 @@ export default function Home() {
         <span className="absolute top-[12%] left-1/2 -translate-x-1/2 whitespace-nowrap">
           THE ART OF
         </span>
-        <span className="absolute top-[26%] left-[8%] whitespace-nowrap">
+        <span className="absolute top-[26%] left-[10%] whitespace-nowrap">
           SEEING
         </span>
         <span className="absolute top-[26%] right-[8%] whitespace-nowrap">
@@ -108,6 +108,14 @@ export default function Home() {
           </div>
         </div>
       </div>
+
+      {/* Hero Tagline */}
+      <div className="absolute bottom-[18%] left-1/2 z-30 w-full -translate-x-1/2 px-6 text-center">
+        <p className="font-[var(--font-oswald)] text-sm font-medium uppercase tracking-[0.15em] text-white sm:text-base md:text-lg">
+          The art of seeing the world by capturing moments that lasts
+        </p>
+      </div>
+    
 
       {/* Left Side Text */}
       <div className="absolute bottom-[38%] left-6 z-30 max-w-[130px] sm:left-8 sm:max-w-[160px] md:left-12">
