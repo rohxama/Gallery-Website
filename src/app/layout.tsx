@@ -1,14 +1,11 @@
 import type { Metadata } from "next";
-import { Syne, Inter } from "next/font/google";
+import { Bebas_Neue, Inter } from "next/font/google";
 import "./globals.css";
-import { Navbar } from "@/components/layout/Navbar";
-import { Footer } from "@/components/layout/Footer";
-import { SmoothScroll } from "@/components/layout/SmoothScroll";
 
-const syne = Syne({
-  variable: "--font-syne",
+const bebasNeue = Bebas_Neue({
+  variable: "--font-bebas-neue",
   subsets: ["latin"],
-  weight: ["600", "700", "800"],
+  weight: "400",
 });
 
 const inter = Inter({
@@ -18,17 +15,8 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "PhotoGallery | Luxury Photography",
-  description:
-    "A premium photography gallery showcasing stunning landscapes, portraits, and editorial photography with a luxury aesthetic.",
-  keywords: [
-    "photography",
-    "gallery",
-    "luxury",
-    "editorial",
-    "landscapes",
-    "portraits",
-  ],
+  title: "PhotoGallery",
+  description: "The Art of Seeing the World — Capturing Moments That Last",
 };
 
 export default function RootLayout({
@@ -39,14 +27,10 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${syne.variable} ${inter.variable} antialiased`}
+      className={`${bebasNeue.variable} ${inter.variable} antialiased`}
     >
       <body className="min-h-screen bg-background text-foreground">
-        <SmoothScroll>
-          <Navbar />
-          <main className="flex-1">{children}</main>
-          <Footer />
-        </SmoothScroll>
+        {children}
       </body>
     </html>
   );
