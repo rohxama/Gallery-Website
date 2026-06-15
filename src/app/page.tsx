@@ -34,9 +34,9 @@ export default function Home() {
   }, []);
 
   return (
-    <section className="relative w-full min-h-screen overflow-hidden bg-[#2563EB] pt-60 md:pt-72">
+    <section className="relative w-full min-h-screen overflow-hidden bg-[#2563EB] pt-36 sm:pt-44 md:pt-60 lg:pt-72">
       {/* Hero Heading */}
-      <h1 className="absolute inset-0 flex flex-col justify-between py-[15vh] items-center text-center pointer-events-none select-none overflow-hidden font-[var(--font-oswald)] text-[9vw] font-bold uppercase leading-[0.88] tracking-tight text-white">
+      <h1 className="absolute inset-0 flex flex-col justify-between py-[12vh] sm:py-[14vh] md:py-[15vh] items-center text-center pointer-events-none select-none overflow-hidden font-[var(--font-oswald)] text-[min(9vw,80px)] font-bold uppercase leading-[0.88] tracking-tight text-white">
         <div className="flex flex-col items-center">
           <span>THE ART OF</span>
           <span>SEEING THE WORLD</span>
@@ -49,32 +49,32 @@ export default function Home() {
       </h1>
 
       {/* Top Left Tagline */}
-      <div className="absolute top-32 left-6 z-30 sm:top-36 sm:left-8 md:top-40 md:left-12">
-        <p className="text-[9px] font-bold uppercase tracking-[0.2em] text-white sm:text-[10px]">
+      <div className="absolute top-28 left-4 z-30 sm:top-32 sm:left-6 md:top-40 md:left-12 lg:left-16">
+        <p className="text-[8px] font-bold uppercase tracking-[0.2em] text-white sm:text-[9px] md:text-[10px]">
           Where Every Click
         </p>
-        <p className="text-[9px] font-bold uppercase tracking-[0.2em] text-white sm:text-[10px]">
+        <p className="text-[8px] font-bold uppercase tracking-[0.2em] text-white sm:text-[9px] md:text-[10px]">
           Tells A Story
         </p>
       </div>
 
       {/* Top Right Year */}
-      <div className="absolute top-32 right-6 z-30 sm:top-36 sm:right-8 md:top-40 md:right-12">
-        <span className="font-[var(--font-oswald)] text-xs font-semibold text-white">
+      <div className="absolute top-28 right-4 z-30 sm:top-32 sm:right-6 md:top-40 md:right-12 lg:right-16">
+        <span className="font-[var(--font-oswald)] text-[10px] font-semibold text-white sm:text-xs md:text-sm">
           2026
         </span>
       </div>
 
       {/* Center Overlapping Photos */}
-      <div className="absolute inset-0 flex items-center justify-center pt-20 md:pt-12">
-        <div className="relative h-[350px] w-[300px] sm:h-[420px] sm:w-[360px] md:h-[480px] md:w-[420px]">
+      <div className="absolute inset-0 flex items-center justify-center pt-12 sm:pt-16 md:pt-20 lg:pt-12">
+        <div className="relative h-[280px] w-[240px] sm:h-[340px] sm:w-[290px] md:h-[420px] md:w-[360px] lg:h-[480px] lg:w-[420px]">
           {/* Left Back Photo */}
           <div
             ref={leftPhotoRef}
-            className="absolute overflow-hidden border-[3px] border-white shadow-2xl sm:border-4 opacity-0"
+            className="absolute overflow-hidden border-[2px] border-white shadow-xl sm:border-[3px] sm:shadow-2xl md:border-4 opacity-0"
             style={{
-              width: "clamp(180px, 22vw, 240px)",
-              height: "clamp(240px, 30vw, 320px)",
+              width: "clamp(140px, 22vw, 240px)",
+              height: "clamp(190px, 30vw, 320px)",
               top: "18%",
               left: "-8%",
               transform: "rotate(-12deg)",
@@ -82,20 +82,21 @@ export default function Home() {
             }}
           >
             <Image
-              src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=500&q=80"
-              alt="Center portrait"
+              src="/images/hero3.webp"
+              alt="Left portrait"
               fill
               className="object-cover"
+              sizes="(max-width: 640px) 140px, (max-width: 768px) 180px, (max-width: 1024px) 220px, 240px"
             />
           </div>
 
           {/* Center Main Photo */}
           <div
             ref={centerPhotoRef}
-            className="absolute overflow-hidden border-[3px] border-white shadow-2xl sm:border-4"
+            className="absolute overflow-hidden border-[2px] border-white shadow-xl sm:border-[3px] sm:shadow-2xl md:border-4"
             style={{
-              width: "clamp(200px, 24vw, 270px)",
-              height: "clamp(270px, 34vw, 360px)",
+              width: "clamp(160px, 24vw, 270px)",
+              height: "clamp(215px, 34vw, 360px)",
               top: "8%",
               left: "50%",
               transform: "translateX(-50%) rotate(0deg)",
@@ -103,20 +104,21 @@ export default function Home() {
             }}
           >
             <Image
-              src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=500&q=80"
+              src="/images/hero-sec1.jpg"
               alt="Center portrait"
               fill
               className="object-cover"
+              sizes="(max-width: 640px) 160px, (max-width: 768px) 200px, (max-width: 1024px) 250px, 270px"
             />
           </div>
 
           {/* Right Back Photo */}
           <div
             ref={rightPhotoRef}
-            className="absolute overflow-hidden border-[3px] border-white shadow-2xl sm:border-4 opacity-0"
+            className="absolute overflow-hidden border-[2px] border-white shadow-xl sm:border-[3px] sm:shadow-2xl md:border-4 opacity-0"
             style={{
-              width: "clamp(180px, 22vw, 240px)",
-              height: "clamp(240px, 30vw, 320px)",
+              width: "clamp(140px, 22vw, 240px)",
+              height: "clamp(190px, 30vw, 320px)",
               top: "18%",
               right: "-8%",
               transform: "rotate(12deg)",
@@ -124,25 +126,26 @@ export default function Home() {
             }}
           >
             <Image
-              src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=500&q=80"
-              alt="Center portrait"
+              src="/images/hero-sec2.jpg"
+              alt="Right portrait"
               fill
               className="object-cover"
+              sizes="(max-width: 640px) 140px, (max-width: 768px) 180px, (max-width: 1024px) 220px, 240px"
             />
           </div>
         </div>
       </div>
 
       {/* Left Side Text */}
-      <div className="absolute bottom-[43%] left-6 z-30 max-w-[130px] sm:left-8 sm:max-w-[160px] md:left-24">
-        <p className="text-[9px] font-bold uppercase tracking-[0.2em] text-white sm:text-[10px]">
+      <div className="absolute bottom-[38%] left-4 z-30 max-w-[100px] sm:bottom-[40%] sm:left-6 sm:max-w-[130px] md:left-24 md:max-w-[160px] lg:left-28">
+        <p className="text-[7px] font-bold uppercase tracking-[0.2em] text-white sm:text-[8px] md:text-[9px] lg:text-[10px]">
           Let us bring your vision to life.
         </p>
       </div>
 
       {/* Bottom Right Text */}
-      <div className="absolute bottom-8 right-6 z-30 max-w-[140px] sm:bottom-[32%] sm:right-8 sm:max-w-[180px] md:right-12">
-        <p className="text-[9px] font-bold uppercase tracking-[0.2em] text-white sm:text-[10px]">
+      <div className="absolute bottom-6 right-4 z-30 max-w-[110px] sm:bottom-8 sm:right-6 sm:max-w-[140px] md:bottom-[32%] md:right-12 md:max-w-[180px] lg:right-16">
+        <p className="text-[7px] font-bold uppercase tracking-[0.2em] text-white sm:text-[8px] md:text-[9px] lg:text-[10px]">
           Our expert photographers will capture your moments
         </p>
       </div>
