@@ -18,12 +18,14 @@ export default function Home() {
       opacity: 1,
       x: -10,
       duration: 0.5,
+      delay: 0,
     }).to(
       rightPhotoRef.current,
       {
         opacity: 1,
         x: 10,
         duration: 0.5,
+        delay: 0,
       },
       "<",
     );
@@ -36,7 +38,7 @@ export default function Home() {
   return (
     <section className="relative w-full min-h-screen overflow-hidden bg-[#2563EB] pt-36 sm:pt-44 md:pt-60 lg:pt-72">
       {/* Hero Heading */}
-      <h1 className="absolute inset-0 flex flex-col justify-between py-[12vh] sm:py-[14vh] md:py-[15vh] items-center text-center pointer-events-none select-none overflow-hidden font-[var(--font-oswald)] text-[min(9vw,80px)] font-bold uppercase leading-[0.88] tracking-tight text-white">
+      <h1 className="absolute inset-0 flex flex-col justify-between py-[36vh] xs:py-[34vh] sm:py-[25vh] md:py-[20vh]  lg:py-[16vh] items-center text-center pointer-events-none select-none overflow-hidden font-[var(--font-oswald)] text-[min(9vw,120px)] font-bold uppercase leading-[0.88] tracking-tight text-white">
         <div className="flex flex-col items-center">
           <span>THE ART OF</span>
           <span>SEEING THE WORLD</span>
@@ -49,18 +51,18 @@ export default function Home() {
       </h1>
 
       {/* Top Left Tagline */}
-      <div className="absolute top-28 left-4 z-30 sm:top-32 sm:left-6 md:top-40 md:left-12 lg:left-16">
-        <p className="text-[8px] font-bold uppercase tracking-[0.2em] text-white sm:text-[9px] md:text-[10px]">
+      <div className="absolute top-54 left-8 z-30 sm:top-32 sm:left-6 md:top-32 md:left-12 lg:left-16">
+        <p className="text-[7px] font-bold uppercase tracking-[0.2em] text-white sm:text-[9px] md:text-[10px]">
           Where Every Click
         </p>
-        <p className="text-[8px] font-bold uppercase tracking-[0.2em] text-white sm:text-[9px] md:text-[10px]">
+        <p className="text-[7px] font-bold uppercase tracking-[0.2em] text-white sm:text-[9px] md:text-[10px]">
           Tells A Story
         </p>
       </div>
 
       {/* Top Right Year */}
-      <div className="absolute top-28 right-4 z-30 sm:top-32 sm:right-6 md:top-40 md:right-12 lg:right-16">
-        <span className="font-[var(--font-oswald)] text-[10px] font-semibold text-white sm:text-xs md:text-sm">
+      <div className="absolute top-54 right-10 z-30 sm:top-32 sm:right-6 md:top-32 md:right-12 lg:right-16">
+        <span className="font-[var(--font-oswald)] text-[7px] font-semibold text-white sm:text-xs md:text-sm">
           2026
         </span>
       </div>
@@ -71,12 +73,26 @@ export default function Home() {
           {/* Left Back Photo */}
           <div
             ref={leftPhotoRef}
-            className="absolute overflow-hidden border-[2px] border-white shadow-xl sm:border-[3px] sm:shadow-2xl md:border-4 opacity-0"
+            className="
+    absolute overflow-hidden border-[2px] border-white shadow-xl
+    sm:border-[3px] sm:shadow-2xl md:border-4 opacity-0
+
+    h-[120px]
+    sm:h-[220px]
+    md:h-[260px]
+    lg:h-[320px]
+
+    w-[100px]
+    sm:w-[180px]
+    md:w-[220px]
+    lg:w-[240px]
+
+    left-[10%]
+    sm:left-[-6%]
+    md:left-[-8%]
+  "
             style={{
-              width: "clamp(140px, 22vw, 240px)",
-              height: "clamp(190px, 30vw, 320px)",
               top: "18%",
-              left: "-8%",
               transform: "rotate(-12deg)",
               zIndex: 10,
             }}
@@ -86,18 +102,29 @@ export default function Home() {
               alt="Left portrait"
               fill
               className="object-cover"
-              sizes="(max-width: 640px) 140px, (max-width: 768px) 180px, (max-width: 1024px) 220px, 240px"
             />
           </div>
 
           {/* Center Main Photo */}
           <div
             ref={centerPhotoRef}
-            className="absolute overflow-hidden border-[2px] border-white shadow-xl sm:border-[3px] sm:shadow-2xl md:border-4"
+            className="
+  absolute overflow-hidden border-[2px] border-white shadow-xl
+  sm:border-[3px] sm:shadow-2xl md:border-4
+  top-[15%] sm:top-[7%] md:top-[8%] lg:top-[10%]
+
+  z-30
+   h-[130px]
+    sm:h-[220px]
+    md:h-[290px]
+    lg:h-[350px]
+
+    w-[100px]
+    sm:w-[180px]
+    md:w-[220px]
+    lg:w-[240px]
+"
             style={{
-              width: "clamp(160px, 24vw, 270px)",
-              height: "clamp(215px, 34vw, 360px)",
-              top: "8%",
               left: "50%",
               transform: "translateX(-50%) rotate(0deg)",
               zIndex: 30,
@@ -108,21 +135,35 @@ export default function Home() {
               alt="Center portrait"
               fill
               className="object-cover"
-              sizes="(max-width: 640px) 160px, (max-width: 768px) 200px, (max-width: 1024px) 250px, 270px"
             />
           </div>
 
           {/* Right Back Photo */}
-          <div
+           <div
             ref={rightPhotoRef}
-            className="absolute overflow-hidden border-[2px] border-white shadow-xl sm:border-[3px] sm:shadow-2xl md:border-4 opacity-0"
+            className="
+    absolute overflow-hidden border-[2px] border-white shadow-xl
+    sm:border-[3px] sm:shadow-2xl md:border-4 opacity-0
+
+    h-[120px]
+    xs:h-[140px]
+    sm:h-[220px]
+    md:h-[260px]
+    lg:h-[320px]
+
+    w-[100px]
+    sm:w-[180px]
+    md:w-[220px]
+    lg:w-[240px]
+
+    right-[10%]
+    sm:right-[-6%]
+    md:right-[-8%]
+  "
             style={{
-              width: "clamp(140px, 22vw, 240px)",
-              height: "clamp(190px, 30vw, 320px)",
               top: "18%",
-              right: "-8%",
               transform: "rotate(12deg)",
-              zIndex: 15,
+              zIndex: 10,
             }}
           >
             <Image
@@ -130,23 +171,23 @@ export default function Home() {
               alt="Right portrait"
               fill
               className="object-cover"
-              sizes="(max-width: 640px) 140px, (max-width: 768px) 180px, (max-width: 1024px) 220px, 240px"
+              sizes="(max-width: 640px) 120px, (max-width: 768px) 180px, (max-width: 1024px) 220px, 240px"
             />
           </div>
         </div>
       </div>
 
       {/* Left Side Text */}
-      <div className="absolute bottom-[38%] left-4 z-30 max-w-[100px] sm:bottom-[40%] sm:left-6 sm:max-w-[130px] md:left-24 md:max-w-[160px] lg:left-28">
+      <div className="absolute bottom-[32%] left-4 z-30 max-w-[100px] sm:bottom-[40%] sm:left-6 sm:max-w-[130px] md:left-10 md:max-w-[160px] lg:left-28">
         <p className="text-[7px] font-bold uppercase tracking-[0.2em] text-white sm:text-[8px] md:text-[9px] lg:text-[10px]">
-          Let us bring your vision to life.
+          Let us bring your vision to life
         </p>
       </div>
 
       {/* Bottom Right Text */}
-      <div className="absolute bottom-6 right-4 z-30 max-w-[110px] sm:bottom-8 sm:right-6 sm:max-w-[140px] md:bottom-[32%] md:right-12 md:max-w-[180px] lg:right-16">
+      <div className="absolute bottom-[28%] z-30 max-w-[110px] sm:bottom-30 sm:max-w-[140px] md:bottom-[36%] md:max-w-[100px] right-[-20px] xl:right-12">
         <p className="text-[7px] font-bold uppercase tracking-[0.2em] text-white sm:text-[8px] md:text-[9px] lg:text-[10px]">
-          Our expert photographers will capture your moments
+          Capture the moments that matter most
         </p>
       </div>
     </section>
