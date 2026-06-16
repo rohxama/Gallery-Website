@@ -27,7 +27,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="overflow-x-hidden">
-      <body className="min-h-screen w-full overflow-x-hidden bg-[#2563EB] font-[var(--font-inter)] text-white">
+      <body className="min-h-screen w-full overflow-x-hidden bg-[#000] font-[var(--font-inter)] text-white">
         <Header />
         <main className="w-full">{children}</main>
       </body>
