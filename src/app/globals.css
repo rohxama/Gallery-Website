@@ -39,6 +39,17 @@ img {
   animation: marquee 10s linear infinite;
 }
 
+@keyframes float-particle {
+  0% { transform: translateY(0) translateX(0); opacity: 0.3; }
+  50% { opacity: 0.8; }
+  100% { transform: translateY(-30px) translateX(15px); opacity: 0.3; }
+}
+
+.writing-vertical {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+}
+
 /* Hide scrollbar */
 ::-webkit-scrollbar {
   display: none;
