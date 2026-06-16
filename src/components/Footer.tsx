@@ -3,14 +3,14 @@
 import Image from "next/image";
 
 const footerProjects = [
-  { name: "Superpower", src: "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=400&q=80", className: "w-[120px] h-[160px] sm:w-[140px] sm:h-[180px] md:w-[160px] md:h-[200px]" },
-  { name: "Girlfriends", src: "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=400&q=80", className: "w-[130px] h-[170px] sm:w-[150px] sm:h-[190px] md:w-[170px] md:h-[210px]" },
-  { name: "Character AI", src: "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=400&q=80", className: "w-[140px] h-[180px] sm:w-[160px] sm:h-[200px] md:w-[180px] md:h-[230px]" },
-  { name: "Bastian Bees", src: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=400&q=80", className: "w-[150px] h-[200px] sm:w-[170px] sm:h-[220px] md:w-[190px] md:h-[250px]" },
-  { name: "Eliza Dolittle", src: "https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?w=400&q=80", className: "w-[140px] h-[180px] sm:w-[160px] sm:h-[200px] md:w-[180px] md:h-[230px]" },
-  { name: "Waverly", src: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&q=80", className: "w-[130px] h-[170px] sm:w-[150px] sm:h-[190px] md:w-[170px] md:h-[210px]" },
-  { name: "Timmons", src: "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=400&q=80", className: "w-[120px] h-[160px] sm:w-[140px] sm:h-[180px] md:w-[160px] md:h-[200px]" },
-  { name: "POGA", src: "https://images.unsplash.com/photo-1513956589380-bad6acb9b9d4?w=400&q=80", className: "w-[110px] h-[150px] sm:w-[130px] sm:h-[170px] md:w-[150px] md:h-[190px]" },
+  { name: "Superpower", src: "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=400&q=80", className: "w-[60px] h-[80px] sm:w-[100px] sm:h-[130px] md:w-[140px] md:h-[180px] lg:w-[160px] lg:h-[200px]" },
+  { name: "Girlfriends", src: "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=400&q=80", className: "w-[65px] h-[85px] sm:w-[110px] sm:h-[140px] md:w-[150px] md:h-[190px] lg:w-[170px] lg:h-[210px]" },
+  { name: "Character AI", src: "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=400&q=80", className: "w-[70px] h-[95px] sm:w-[120px] sm:h-[155px] md:w-[160px] md:h-[200px] lg:w-[180px] lg:h-[230px]" },
+  { name: "Bastian Bees", src: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=400&q=80", className: "w-[75px] h-[100px] sm:w-[130px] sm:h-[170px] md:w-[170px] md:h-[220px] lg:w-[190px] lg:h-[250px]" },
+  { name: "Eliza Dolittle", src: "https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?w=400&q=80", className: "w-[70px] h-[95px] sm:w-[120px] sm:h-[155px] md:w-[160px] md:h-[200px] lg:w-[180px] lg:h-[230px]" },
+  { name: "Waverly", src: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&q=80", className: "w-[65px] h-[85px] sm:w-[110px] sm:h-[140px] md:w-[150px] md:h-[190px] lg:w-[170px] lg:h-[210px]" },
+  { name: "Timmons", src: "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=400&q=80", className: "w-[60px] h-[80px] sm:w-[100px] sm:h-[130px] md:w-[140px] md:h-[180px] lg:w-[160px] lg:h-[200px]" },
+  { name: "POGA", src: "https://images.unsplash.com/photo-1513956589380-bad6acb9b9d4?w=400&q=80", className: "w-[55px] h-[75px] sm:w-[90px] sm:h-[120px] md:w-[130px] md:h-[170px] lg:w-[150px] lg:h-[190px]" },
 ];
 
 export function Footer() {
