@@ -5,8 +5,7 @@ import Link from "next/link";
 
 const navLinks = [
   { href: "/", label: "Home" },
-  { href: "/about", label: "About" },
-  { href: "/services", label: "Services" },
+  { href: "/gallery", label: "gallery" },
   { href: "/contact", label: "Contact" },
 ];
 
@@ -20,7 +19,7 @@ export function Header() {
           href="/"
           className="shrink-0 text-base font-bold tracking-tight text-white md:text-lg"
         >
-          Brand<span className="text-white/60">.</span>
+          Aurabelle<span className="text-white/60">.</span>
         </Link>
 
         <nav className="hidden min-w-0 items-center justify-center gap-8 md:flex">
@@ -37,16 +36,10 @@ export function Header() {
 
         <div className="hidden shrink-0 items-center gap-4 md:flex">
           <Link
-            href="/login"
-            className="whitespace-nowrap text-xs font-medium text-white/80 transition-colors hover:text-white"
-          >
-            Log in
-          </Link>
-          <Link
             href="/signup"
             className="rounded-full border border-white/30 px-5 py-2 whitespace-nowrap text-xs font-medium text-white transition-all hover:bg-white hover:text-[#000]"
           >
-            Sign up
+            Get started
           </Link>
         </div>
 
@@ -89,18 +82,11 @@ export function Header() {
             ))}
             <div className="mt-4 flex w-full flex-col gap-3 border-t border-white/20 pt-4">
               <Link
-                href="/login"
-                className="w-full text-sm text-white/80 transition-colors hover:text-white"
-                onClick={() => setMenuOpen(false)}
-              >
-                Log in
-              </Link>
-              <Link
                 href="/signup"
                 className="w-full rounded-full border border-white/30 px-5 py-2 text-center text-sm font-medium text-white transition-all hover:bg-white hover:text-[#000]"
                 onClick={() => setMenuOpen(false)}
               >
-                Sign up
+                Get started
               </Link>
             </div>
           </nav>
