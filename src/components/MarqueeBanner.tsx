@@ -12,7 +12,7 @@ export function MarqueeBanner() {
             className="flex items-center gap-20 font-[var(--font-oswald)] font-bold uppercase text-white tracking-wider"
             style={{ fontSize: "clamp(28px, 4vw, 48px)" }}
           >
-            <span>brand</span>
+            <span>Aurabelle</span>
             <span>✦</span>
           </div>
         ))}

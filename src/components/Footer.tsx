@@ -3,14 +3,14 @@
 import Image from "next/image";
 
 const footerProjects = [
-  { name: "Superpower", src: "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=400&q=80", className: "w-[60px] h-[80px] sm:w-[100px] sm:h-[130px] md:w-[140px] md:h-[180px] lg:w-[160px] lg:h-[200px]" },
-  { name: "Girlfriends", src: "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=400&q=80", className: "w-[65px] h-[85px] sm:w-[110px] sm:h-[140px] md:w-[150px] md:h-[190px] lg:w-[170px] lg:h-[210px]" },
-  { name: "Character AI", src: "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=400&q=80", className: "w-[70px] h-[95px] sm:w-[120px] sm:h-[155px] md:w-[160px] md:h-[200px] lg:w-[180px] lg:h-[230px]" },
-  { name: "Bastian Bees", src: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=400&q=80", className: "w-[75px] h-[100px] sm:w-[130px] sm:h-[170px] md:w-[170px] md:h-[220px] lg:w-[190px] lg:h-[250px]" },
-  { name: "Eliza Dolittle", src: "https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?w=400&q=80", className: "w-[70px] h-[95px] sm:w-[120px] sm:h-[155px] md:w-[160px] md:h-[200px] lg:w-[180px] lg:h-[230px]" },
-  { name: "Waverly", src: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&q=80", className: "w-[65px] h-[85px] sm:w-[110px] sm:h-[140px] md:w-[150px] md:h-[190px] lg:w-[170px] lg:h-[210px]" },
-  { name: "Timmons", src: "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=400&q=80", className: "w-[60px] h-[80px] sm:w-[100px] sm:h-[130px] md:w-[140px] md:h-[180px] lg:w-[160px] lg:h-[200px]" },
-  { name: "POGA", src: "https://images.unsplash.com/photo-1513956589380-bad6acb9b9d4?w=400&q=80", className: "w-[55px] h-[75px] sm:w-[90px] sm:h-[120px] md:w-[130px] md:h-[170px] lg:w-[150px] lg:h-[190px]" },
+  { name: "Superpower", src: "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=400&q=80", className: "w-[45px] h-[60px] min-[400px]:w-[55px] min-[400px]:h-[75px] sm:w-[80px] sm:h-[110px] md:w-[110px] md:h-[150px] lg:w-[140px] lg:h-[180px] xl:w-[160px] xl:h-[200px] 2xl:w-[180px] 2xl:h-[220px]" },
+  { name: "Girlfriends", src: "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=400&q=80", className: "w-[50px] h-[65px] min-[400px]:w-[60px] min-[400px]:h-[80px] sm:w-[90px] sm:h-[120px] md:w-[120px] md:h-[160px] lg:w-[150px] lg:h-[195px] xl:w-[170px] xl:h-[215px] 2xl:w-[190px] 2xl:h-[235px]" },
+  { name: "Character AI", src: "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=400&q=80", className: "w-[55px] h-[75px] min-[400px]:w-[65px] min-[400px]:h-[90px] sm:w-[100px] sm:h-[135px] md:w-[135px] md:h-[180px] lg:w-[165px] lg:h-[220px] xl:w-[185px] xl:h-[245px] 2xl:w-[205px] 2xl:h-[265px]" },
+  { name: "Bastian Bees", src: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=400&q=80", className: "w-[60px] h-[80px] min-[400px]:w-[70px] min-[400px]:h-[95px] sm:w-[110px] sm:h-[150px] md:w-[150px] md:h-[200px] lg:w-[180px] lg:h-[240px] xl:w-[200px] xl:h-[260px] 2xl:w-[220px] 2xl:h-[280px]" },
+  { name: "Eliza Dolittle", src: "https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?w=400&q=80", className: "w-[55px] h-[75px] min-[400px]:w-[65px] min-[400px]:h-[90px] sm:w-[100px] sm:h-[135px] md:w-[135px] md:h-[180px] lg:w-[165px] lg:h-[220px] xl:w-[185px] xl:h-[245px] 2xl:w-[205px] 2xl:h-[265px]" },
+  { name: "Waverly", src: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&q=80", className: "w-[50px] h-[65px] min-[400px]:w-[60px] min-[400px]:h-[80px] sm:w-[90px] sm:h-[120px] md:w-[120px] md:h-[160px] lg:w-[150px] lg:h-[195px] xl:w-[170px] xl:h-[215px] 2xl:w-[190px] 2xl:h-[235px]" },
+  { name: "Timmons", src: "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=400&q=80", className: "w-[45px] h-[60px] min-[400px]:w-[55px] min-[400px]:h-[75px] sm:w-[80px] sm:h-[110px] md:w-[110px] md:h-[150px] lg:w-[140px] lg:h-[180px] xl:w-[160px] xl:h-[200px] 2xl:w-[180px] 2xl:h-[220px]" },
+  { name: "POGA", src: "https://images.unsplash.com/photo-1513956589380-bad6acb9b9d4?w=400&q=80", className: "w-[40px] h-[55px] min-[400px]:w-[50px] min-[400px]:h-[70px] sm:w-[75px] sm:h-[105px] md:w-[100px] md:h-[140px] lg:w-[130px] lg:h-[170px] xl:w-[150px] xl:h-[190px] 2xl:w-[170px] 2xl:h-[210px]" },
 ];
 
 export function Footer() {
@@ -19,7 +19,7 @@ export function Footer() {
       {/* Top Bar */}
       <div className="w-full flex justify-start items-center px-6 sm:px-10 pt-6 sm:pt-8 md:pt-10 pb-4">
         <h2 className="font-[var(--font-oswald)] text-2xl sm:text-3xl md:text-4xl font-bold">
-          Brand<sup className="text-sm">®</sup>
+          Aurabelle<sup className="text-sm">®</sup>
         </h2>
       </div>
 
