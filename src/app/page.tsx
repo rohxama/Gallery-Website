@@ -53,7 +53,7 @@ export default function Home() {
 
   return (
     <>
-      {/* ==================== HERO SECTION (DO NOT MODIFY) ==================== */}
+      {/* ==================== HERO SECTION ==================== */}
       <section className="relative w-full min-h-screen overflow-hidden bg-[#000] pt-36 sm:pt-44 md:pt-60 lg:pt-72">
         {/* Hero Heading */}
         <h1 className="absolute inset-0 flex flex-col justify-between py-[36vh] xs:py-[34vh] sm:py-[25vh] md:py-[20vh]  lg:py-[16vh] items-center text-center pointer-events-none select-none overflow-hidden font-[var(--font-oswald)] text-[min(9vw,120px)] font-bold uppercase leading-[0.88] tracking-tight text-white">
@@ -198,14 +198,14 @@ export default function Home() {
         {/* Left Side Text */}
         <div className="absolute bottom-[32%] left-4 z-30 max-w-[100px] sm:bottom-[40%] sm:left-6 sm:max-w-[130px] md:left-10 md:max-w-[160px] lg:left-28">
           <p className="text-[7px] font-bold uppercase tracking-[0.2em] text-white sm:text-[8px] md:text-[9px] lg:text-[10px]">
-            Let us bring your vision to life
+            A Collection of Lovely Moments
           </p>
         </div>
 
         {/* Bottom Right Text */}
-        <div className="absolute bottom-[28%] z-30 max-w-[110px] sm:bottom-30 sm:max-w-[140px] md:bottom-[36%] md:max-w-[100px] right-[-20px] xl:right-12">
+        <div className="absolute bottom-[28%] z-30 max-w-[110px] sm:bottom-30 sm:max-w-[140px] md:bottom-[36%] md:max-w-[100px] right-[-20px] xl:right-20">
           <p className="text-[7px] font-bold uppercase tracking-[0.2em] text-white sm:text-[8px] md:text-[9px] lg:text-[10px]">
-            Capture the moments that matter most
+           Because Every Girl Has a Story
           </p>
         </div>
       </section>

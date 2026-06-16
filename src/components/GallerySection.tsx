@@ -88,9 +88,7 @@ export function GallerySection() {
       {/* Heading - centered with z-index above images */}
       <div className="absolute inset-0 flex items-center justify-center z-20 pointer-events-none">
         <h2 className="font-[var(--font-oswald)] text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white text-center leading-tight">
-          Real recommendations
-          <br />
-          by real people
+         A collection of moments <br /> filled with elegance and charm.
         </h2>
       </div>
 
