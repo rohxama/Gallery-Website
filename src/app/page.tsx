@@ -12,9 +12,9 @@ import { Footer } from "@/components/Footer";
 const sliderImages = [
   "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=80",
   "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=600&q=80",
+  "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=600&q=80",
+  "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=600&q=80",
   "https://images.unsplash.com/photo-1517841905240-472988babdf9?w=600&q=80",
-  "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=600&q=80",
-  "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=600&q=80",
   "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=600&q=80",
   "https://images.unsplash.com/photo-1517841905240-472988babdf9?w=600&q=80",
   "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=600&q=80",
@@ -208,10 +208,29 @@ export default function Home() {
            Because Every Girl Has a Story
           </p>
         </div>
+
+        {/* Down Arrow */}
+        <div className="absolute bottom-5 left-1/2 -translate-x-1/2 z-30">
+          <button
+            onClick={() => {
+              document.getElementById("section2")?.scrollIntoView({ behavior: "smooth" });
+            }}
+            className="flex flex-col items-center gap-2 text-white hover:text-white transition-colors"
+          >
+            <svg
+              className="w-7 h-12 animate-bounce border-2 border-white rounded-xl p-1"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+            </svg>
+          </button>
+        </div>
       </section>
 
       {/* ==================== 3D SLIDER SECTION ==================== */}
-      <section className="relative w-full bg-[#000] pt-16 sm:pt-20 md:pt-24 pb-32">
+      <section id="section2" className="relative w-full bg-[#000] pt-16 sm:pt-20 md:pt-24 pb-32 overflow-hidden">
         
 
         {/* 3D Slider Component - relative wrapper for absolute children */}
