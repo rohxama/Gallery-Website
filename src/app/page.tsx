@@ -230,13 +230,90 @@ export default function Home() {
       </section>
 
       {/* ==================== 3D SLIDER SECTION ==================== */}
-      <section id="section2" className="relative w-full bg-[#000] pt-16 sm:pt-20 md:pt-24 pb-32 overflow-hidden">
-        
+      <section id="section2" className="relative w-full bg-[#000] pt-20 sm:pt-28 md:pt-20 pb-10 sm:pb-28 md:pb-36 overflow-hidden">
+        {/* Background huge text */}
+        <div className="absolute inset-0 flex items-center justify-center pointer-events-none select-none overflow-hidden">
+          <span className="font-[var(--font-oswald)] text-[120px] sm:text-[200px] md:text-[300px] lg:text-[400px] font-bold uppercase text-white/[0.02] tracking-widest whitespace-nowrap">
+            LUNA
+          </span>
+        </div>
 
-        {/* 3D Slider Component - relative wrapper for absolute children */}
-        <div className="relative" style={{ height: "calc(50vmin + 100px + 10vmin)" }}>
+        {/* White gradient blob - top left */}
+        <div
+          className="absolute -top-32 -left-32 w-[300px] h-[300px] sm:w-[400px] sm:h-[400px] rounded-full pointer-events-none"
+          style={{
+            background: "radial-gradient(circle, rgba(255,255,255,0.10) 0%, transparent 90%)",
+            filter: "blur(60px)",
+          }}
+        />
+        {/* White gradient blob - bottom right */}
+        <div
+          className="absolute -bottom-32 -right-32 w-[350px] h-[350px] sm:w-[450px] sm:h-[450px] rounded-full pointer-events-none"
+          style={{
+            background: "radial-gradient(circle, rgba(255,255,255,0.10) 0%, transparent 90%)",
+            filter: "blur(60px)",
+          }}
+        />
+        {/* Center blob */}
+        <div
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] sm:w-[600px] sm:h-[600px] rounded-full pointer-events-none"
+          style={{
+            background: "radial-gradient(circle, rgba(255,255,255,0.10) 0%, transparent 70%)",
+            filter: "blur(80px)",
+          }}
+        />
+
+        {/* Floating particles */}
+        {Array.from({ length: 25 }).map((_, i) => (
+          <div
+            key={`particle-${i}`}
+            className="absolute rounded-full"
+            style={{
+              width: `${2 + Math.random() * 4}px`,
+              height: `${2 + Math.random() * 4}px`,
+              top: `${Math.random() * 100}%`,
+              left: `${Math.random() * 100}%`,
+              background: "rgba(255,255,255,0.3)",
+              animation: `float-particle ${4 + Math.random() * 6}s ease-in-out ${Math.random() * 3}s infinite alternate`,
+            }}
+          />
+        ))}
+
+        {/* Top heading */}
+        <div className="relative z-10 text-center mb-2 sm:mb-5">
+          <h2 className="font-[var(--font-oswald)] text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white/60 tracking-tight">
+            Beauty in Every Frame
+          </h2>
+        </div>
+
+        {/* Left vertical text */}
+        <div className="absolute left-4 sm:left-6 md:left-10 top-1/2 -translate-y-1/2 z-10 hidden sm:block">
+          <div className="flex flex-col items-center gap-4">
+            <span className="text-[8px] sm:text-[9px] md:text-[10px] font-semibold uppercase tracking-[0.3em] text-white/60 writing-vertical">
+              EST. 2026
+            </span>
+            <div className="w-px h-12 bg-gradient-to-b from-white/40 to-white/90" />
+            <span className="text-[8px] sm:text-[9px] md:text-[10px] font-semibold uppercase tracking-[0.3em] text-white/60 writing-vertical">
+              CURATED WITH LOVE
+            </span>
+          </div>
+        </div>
+
+        {/* Right vertical text */}
+        <div className="absolute right-4 sm:right-6 md:right-10 top-1/2 -translate-y-1/2 z-10 hidden sm:block">
+          <div className="flex flex-col items-center gap-4">
+            <span className="text-[8px] sm:text-[9px] md:text-[10px] font-semibold uppercase tracking-[0.3em] text-white/60 writing-vertical">
+              AESTHETIC COLLECTION
+            </span>
+            <div className="w-px h-16 bg-gradient-to-b from-white/40 to-white/90" />
+          </div>
+        </div>
+
+        {/* 3D Slider Component */}
+        <div className="relative z-10" style={{ height: "calc(50vmin + 100px + 10vmin)" }}>
           <Slider3D slides={sliderImages} />
         </div>
+
       </section>
 
       {/* ==================== GALLERY SECTION ==================== */}
