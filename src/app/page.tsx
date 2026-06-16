@@ -12,9 +12,9 @@ import { Footer } from "@/components/Footer";
 const sliderImages = [
   "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=80",
   "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=600&q=80",
-  "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=600&q=80",
-  "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=600&q=80",
   "https://images.unsplash.com/photo-1517841905240-472988babdf9?w=600&q=80",
+  "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=600&q=80",
+  "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=600&q=80",
   "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=600&q=80",
   "https://images.unsplash.com/photo-1517841905240-472988babdf9?w=600&q=80",
   "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=600&q=80",
