@@ -4,7 +4,9 @@ import { useRef, useLayoutEffect } from "react";
 import Image from "next/image";
 import gsap from "gsap";
 import { Slider3D } from "@/components/Slider3D";
-import { Gallery } from "@/components/Gallery";
+import { GallerySection } from "@/components/GallerySection";
+import { MarqueeBanner } from "@/components/MarqueeBanner";
+import { Footer } from "@/components/Footer";
 
 // Sample images for the 3D slider
 const sliderImages = [
@@ -219,7 +221,15 @@ export default function Home() {
       </section>
 
       {/* ==================== GALLERY SECTION ==================== */}
-      <Gallery />
+      <GallerySection />
+
+      {/* ==================== MARQUEE BANNER ==================== */}
+      <div className="bg-[#000]">
+        <MarqueeBanner />
+      </div>
+
+      {/* ==================== FOOTER ==================== */}
+      <Footer />
     </>
   );
 }
