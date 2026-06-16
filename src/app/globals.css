@@ -39,6 +39,16 @@ img {
   animation: marquee 10s linear infinite;
 }
 
+/* Hide scrollbar */
+::-webkit-scrollbar {
+  display: none;
+}
+
+html {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
 /* Gooey Cursor */
 #cursor {
   position: fixed;
