@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Oswald, Inter } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/Header";
+import { GooeyCursor } from "@/components/GooeyCursor";
 
 const oswald = Oswald({
   variable: "--font-oswald",
@@ -28,6 +29,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="overflow-x-hidden">
       <body className="min-h-screen w-full overflow-x-hidden bg-[#000] font-[var(--font-inter)] text-white">
+        <GooeyCursor />
         <Header />
         <main className="w-full">{children}</main>
       </body>

@@ -44,7 +44,7 @@ export function Header() {
           </Link>
           <Link
             href="/signup"
-            className="rounded-full border border-white/30 px-5 py-2 whitespace-nowrap text-xs font-medium text-white transition-all hover:bg-white hover:text-[#2563EB]"
+            className="rounded-full border border-white/30 px-5 py-2 whitespace-nowrap text-xs font-medium text-white transition-all hover:bg-white hover:text-[#000]"
           >
             Sign up
           </Link>
@@ -75,7 +75,7 @@ export function Header() {
       </div>
 
       {menuOpen && (
-        <div className="w-full bg-[#2563EB]/95 backdrop-blur-sm md:hidden">
+        <div className="w-full bg-[#000]/95 backdrop-blur-sm md:hidden">
           <nav className="mx-auto flex w-full max-w-7xl flex-col px-6 py-6">
             {navLinks.map((link) => (
               <Link
@@ -97,7 +97,7 @@ export function Header() {
               </Link>
               <Link
                 href="/signup"
-                className="w-full rounded-full border border-white/30 px-5 py-2 text-center text-sm font-medium text-white transition-all hover:bg-white hover:text-[#2563EB]"
+                className="w-full rounded-full border border-white/30 px-5 py-2 text-center text-sm font-medium text-white transition-all hover:bg-white hover:text-[#000]"
                 onClick={() => setMenuOpen(false)}
               >
                 Sign up

@@ -38,3 +38,17 @@ img {
 .animate-marquee {
   animation: marquee 10s linear infinite;
 }
+
+/* Gooey Cursor */
+#cursor {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  filter: url(#goo);
+  z-index: 9999;
+    mix-blend-mode: difference;  
+}
+
+.goo {
+  display: none;
+}
