@@ -5,7 +5,6 @@ import Image from "next/image";
 import gsap from "gsap";
 import { Slider3D } from "@/components/Slider3D";
 import { GallerySection } from "@/components/GallerySection";
-import { MarqueeBanner } from "@/components/MarqueeBanner";
 import { Footer } from "@/components/Footer";
 
 // Sample images for the 3D slider
@@ -240,18 +239,18 @@ export default function Home() {
 
         {/* White gradient blob - top left */}
         <div
-          className="absolute -top-32 -left-32 w-[300px] h-[300px] sm:w-[400px] sm:h-[400px] rounded-full pointer-events-none"
+          className="absolute -top-10 -left-32 w-[300px] h-[300px] sm:w-[400px] sm:h-[400px] rounded-full pointer-events-none"
           style={{
             background: "radial-gradient(circle, rgba(255,255,255,0.10) 0%, transparent 90%)",
-            filter: "blur(60px)",
+            filter: "blur(40px)",
           }}
         />
         {/* White gradient blob - bottom right */}
         <div
-          className="absolute -bottom-32 -right-32 w-[350px] h-[350px] sm:w-[450px] sm:h-[450px] rounded-full pointer-events-none"
+          className="absolute -bottom-5 -right-32 w-[350px] h-[350px] sm:w-[450px] sm:h-[450px] rounded-full pointer-events-none"
           style={{
             background: "radial-gradient(circle, rgba(255,255,255,0.10) 0%, transparent 90%)",
-            filter: "blur(60px)",
+            filter: "blur(40px)",
           }}
         />
         {/* Center blob */}
@@ -281,7 +280,7 @@ export default function Home() {
 
         {/* Top heading */}
         <div className="relative z-10 text-center mb-2 sm:mb-5">
-          <h2 className="font-[var(--font-oswald)] text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white/60 tracking-tight">
+          <h2 className="font-[var(--font-oswald)] text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white tracking-tight">
             Beauty in Every Frame
           </h2>
         </div>
@@ -318,11 +317,6 @@ export default function Home() {
 
       {/* ==================== GALLERY SECTION ==================== */}
       <GallerySection />
-
-      {/* ==================== MARQUEE BANNER ==================== */}
-      <div className="bg-[#000]">
-        <MarqueeBanner />
-      </div>
 
       {/* ==================== FOOTER ==================== */}
       <Footer />
