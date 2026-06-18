@@ -66,8 +66,8 @@ export function GooeyCursor() {
         const xDiff = next.x - current.x;
         const yDiff = next.y - current.y;
 
-        current.x += xDiff * 0.35;
-        current.y += yDiff * 0.35;
+        current.x += xDiff * 0.25;
+        current.y += yDiff * 0.25;
 
         const el = cursorCircles[i];
         if (!el) continue;

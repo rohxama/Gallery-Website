@@ -50,17 +50,17 @@ export function Header() {
           aria-label="Toggle menu"
         >
           <span
-            className={`block h-0.5 w-5 bg-white transition-transform duration-200 ${
+            className={`block h-0.5 w-5 bg-white transition-all duration-300 ease-in-out ${
               menuOpen ? "translate-y-1 rotate-45" : ""
             }`}
           />
           <span
-            className={`block h-0.5 w-5 bg-white transition-opacity duration-200 ${
+            className={`block h-0.5 w-5 bg-white transition-all duration-300 ease-in-out ${
               menuOpen ? "opacity-0" : ""
             }`}
           />
           <span
-            className={`block h-0.5 w-5 bg-white transition-transform duration-200 ${
+            className={`block h-0.5 w-5 bg-white transition-all duration-300 ease-in-out ${
               menuOpen ? "-translate-y-1.5 -rotate-45" : ""
             }`}
           />
