@@ -9,14 +9,14 @@ import { Footer } from "@/components/Footer";
 
 // Sample images for the 3D slider
 const sliderImages = [
-  "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=80",
-  "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=600&q=80",
-  "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=600&q=80",
-  "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=600&q=80",
-  "https://images.unsplash.com/photo-1517841905240-472988babdf9?w=600&q=80",
-  "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=600&q=80",
-  "https://images.unsplash.com/photo-1517841905240-472988babdf9?w=600&q=80",
-  "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=600&q=80",
+  "/images/img11.jpg",
+  "/images/img12.jpg",
+  "/images/img15.jpg",
+  "/images/img19.jpg",
+  "/images/img21.jpg",
+  "/images/img28.jpg",
+  "/images/img8.jpg",
+  "/images/d382f75e36a55bb29c393b632b91a02e.jpg",
 ];
 
 export default function Home() {
@@ -26,21 +26,23 @@ export default function Home() {
 
   useLayoutEffect(() => {
     const tl = gsap.timeline({
-      delay: 1,
+      delay: 0.5,
     });
 
     tl.to(leftPhotoRef.current, {
       opacity: 1,
       x: -10,
-      duration: 0.5,
+      duration: 1.2,
       delay: 0,
+      ease: "power3.out",
     }).to(
       rightPhotoRef.current,
       {
         opacity: 1,
         x: 10,
-        duration: 0.5,
+        duration: 1.2,
         delay: 0,
+        ease: "power3.out",
       },
       "<",
     );
@@ -53,7 +55,7 @@ export default function Home() {
   return (
     <>
       {/* ==================== HERO SECTION ==================== */}
-      <section className="relative w-full min-h-screen overflow-hidden bg-[#000] pt-36 sm:pt-44 md:pt-60 lg:pt-72">
+      <section className="relative w-full sm:h-[100vh] h-[70vh] overflow-hidden bg-[#000] pt-26 md:pt-40 lg:pt-72">
         {/* Hero Heading */}
         <h1 className="absolute inset-0 flex flex-col justify-between py-[36vh] xs:py-[34vh] sm:py-[25vh] md:py-[20vh]  lg:py-[16vh] items-center text-center pointer-events-none select-none overflow-hidden font-[var(--font-oswald)] text-[min(9vw,120px)] font-bold uppercase leading-[0.88] tracking-tight text-white">
           <div className="flex flex-col items-center">
@@ -68,7 +70,7 @@ export default function Home() {
         </h1>
 
         {/* Top Left Tagline */}
-        <div className="absolute top-54 left-8 z-30 sm:top-32 sm:left-6 md:top-32 md:left-12 lg:left-16">
+        <div className="absolute top-54 left-8 z-30 sm:top-32 sm:left-6 md:top-32 md:left-12 lg:left-16 hidden sm:block">
           <p className="text-[7px] font-bold uppercase tracking-[0.2em] text-white sm:text-[9px] md:text-[10px]">
             Where Every Click
           </p>
@@ -78,14 +80,14 @@ export default function Home() {
         </div>
 
         {/* Top Right Year */}
-        <div className="absolute top-54 right-10 z-30 sm:top-32 sm:right-6 md:top-32 md:right-12 lg:right-16">
+        <div className="absolute top-54 right-10 z-30 sm:top-32 sm:right-6 md:top-32 md:right-12 lg:right-16 hidden sm:block">
           <span className="font-[var(--font-oswald)] text-[7px] font-semibold text-white sm:text-xs md:text-sm">
             2026
           </span>
         </div>
 
         {/* Center Overlapping Photos */}
-        <div className="absolute inset-0 flex items-center justify-center pt-12 sm:pt-16 md:pt-20 lg:pt-12">
+        <div className="absolute inset-0 flex items-center justify-center pt-2 sm:pt-16 md:pt-20 lg:pt-12">
           <div className="relative h-[280px] w-[240px] sm:h-[340px] sm:w-[290px] md:h-[420px] md:w-[360px] lg:h-[480px] lg:w-[420px]">
             {/* Left Back Photo */}
             <div
@@ -107,9 +109,12 @@ export default function Home() {
     left-[10%]
     sm:left-[-6%]
     md:left-[-8%]
+
+    
+    top-[8%]
+    xs:top-[-18%]
   "
               style={{
-                top: "18%",
                 transform: "rotate(-12deg)",
                 zIndex: 10,
               }}
@@ -128,7 +133,7 @@ export default function Home() {
               className="
   absolute overflow-hidden border-[2px] border-white shadow-xl
   sm:border-[3px] sm:shadow-2xl md:border-4
-  top-[15%] sm:top-[7%] md:top-[8%] lg:top-[10%]
+  top-[3%] 
 
   z-30
    h-[130px]
@@ -176,9 +181,11 @@ export default function Home() {
     right-[10%]
     sm:right-[-6%]
     md:right-[-8%]
+
+     top-[8%]
+    xs:top-[-18%]
   "
               style={{
-                top: "18%",
                 transform: "rotate(12deg)",
                 zIndex: 10,
               }}
@@ -195,21 +202,21 @@ export default function Home() {
         </div>
 
         {/* Left Side Text */}
-        <div className="absolute bottom-[32%] left-4 z-30 max-w-[100px] sm:bottom-[40%] sm:left-6 sm:max-w-[130px] md:left-10 md:max-w-[160px] lg:left-28">
+        <div className="absolute bottom-[4%] left-4 z-30 max-w-[100px] sm:bottom-[40%] sm:left-6 sm:max-w-[130px] md:left-10 md:max-w-[160px] lg:left-28 hidden sm:block">
           <p className="text-[7px] font-bold uppercase tracking-[0.2em] text-white sm:text-[8px] md:text-[9px] lg:text-[10px]">
             A Collection of Lovely Moments
           </p>
         </div>
 
         {/* Bottom Right Text */}
-        <div className="absolute bottom-[28%] z-30 max-w-[110px] sm:bottom-30 sm:max-w-[140px] md:bottom-[36%] md:max-w-[100px] right-[-20px] xl:right-20">
+        <div className="absolute bottom-[1%] z-30 max-w-[110px] sm:bottom-30 sm:max-w-[140px] md:bottom-[36%] md:max-w-[100px] right-[-20px] xl:right-20 hidden sm:block">
           <p className="text-[7px] font-bold uppercase tracking-[0.2em] text-white sm:text-[8px] md:text-[9px] lg:text-[10px]">
            Because Every Girl Has a Story
           </p>
         </div>
 
         {/* Down Arrow */}
-        <div className="absolute bottom-5 left-1/2 -translate-x-1/2 z-30">
+        <div className="absolute bottom-5 left-1/2 -translate-x-1/2 z-30 hidden sm:flex">
           <button
             onClick={() => {
               document.getElementById("section2")?.scrollIntoView({ behavior: "smooth" });
@@ -229,13 +236,8 @@ export default function Home() {
       </section>
 
       {/* ==================== 3D SLIDER SECTION ==================== */}
-      <section id="section2" className="relative w-full bg-[#000] pt-20 sm:pt-28 md:pt-20 pb-10 sm:pb-28 md:pb-36 overflow-hidden">
-        {/* Background huge text */}
-        <div className="absolute inset-0 flex items-center justify-center pointer-events-none select-none overflow-hidden">
-          <span className="font-[var(--font-oswald)] text-[120px] sm:text-[200px] md:text-[300px] lg:text-[400px] font-bold uppercase text-white/[0.02] tracking-widest whitespace-nowrap">
-            LUNA
-          </span>
-        </div>
+      <section id="section2" className="relative w-full bg-[#000] pt-8 sm:pt-28 md:pt-20 pb-10 sm:pb-28 md:pb-36 overflow-hidden">
+
 
         {/* White gradient blob - top left */}
         <div
@@ -280,7 +282,7 @@ export default function Home() {
 
         {/* Top heading */}
         <div className="relative z-10 text-center mb-2 sm:mb-5">
-          <h2 className="font-[var(--font-oswald)] text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white tracking-tight">
+          <h2 className="font-[var(--font-oswald)]  px-3 sm:px-0 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white tracking-tight">
             Beauty in Every Frame
           </h2>
         </div>
