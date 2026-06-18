@@ -57,7 +57,7 @@ export function Slider3D({ slides: initialSlides }: Slider3DProps) {
     intervalRef.current = setInterval(() => {
       angleRef.current += step;
       applyRotation(angleRef.current);
-    }, 2500);
+    }, 3000);
   }, [step, applyRotation]);
 
   // Stop auto-rotate
@@ -123,7 +123,7 @@ export function Slider3D({ slides: initialSlides }: Slider3DProps) {
     isDragging.current = false;
 
     if (wrapRef.current) {
-      wrapRef.current.style.transition = "transform 1.5s ease-in-out";
+      wrapRef.current.style.transition = "transform 2s ease-in-out";
     }
 
     // Snap to nearest step
@@ -205,7 +205,7 @@ export function Slider3D({ slides: initialSlides }: Slider3DProps) {
       {/* Main 3D Slider - centered absolutely */}
       <div
         ref={sliderRef}
-        className="absolute cursor-grab active:cursor-grabbing"
+        className="absolute cursor-grab active:cursor-grabbing w-[35vmin] sm:w-[40vmin] md:w-[50vmin] h-[35vmin] sm:h-[45vmin] md:h-[50vmin]"
         style={{
           top: 0,
           bottom: "25vmin",
@@ -216,8 +216,6 @@ export function Slider3D({ slides: initialSlides }: Slider3DProps) {
           perspectiveOrigin: "50% 10%",
           transition: "perspective-origin .5s, perspective .5s",
           perspective: `${perspective}px`,
-          width: "50vmin",
-          height: "50vmin",
         }}
       >
         {/* 3D Wrap */}
@@ -227,18 +225,18 @@ export function Slider3D({ slides: initialSlides }: Slider3DProps) {
           style={{
             transformStyle: "preserve-3d",
             willChange: "transform",
-            transition: "transform 1.5s ease-in-out",
+            transition: "transform 2s ease-in-out",
           }}
         >
           {initialSlides.slice(0, slideCount).map((slide, i) => (
             <div
               key={i}
-              className="absolute"
+              className="absolute flex items-center justify-center"
               style={{
                 boxSizing: "border-box",
-                width: "95%",
-                left: "2.5%",
-                top: "30%",
+                width: "80%",
+                left: "10%",
+                top: "40%",
                 height: "80%",
                 backfaceVisibility: backfaceVisible ? "hidden" : "visible",
                 padding: "5vmin",
