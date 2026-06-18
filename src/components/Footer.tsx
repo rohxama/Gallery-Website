@@ -1,25 +1,99 @@
 "use client";
 
-import Image from "next/image";
+import { useEffect, useRef } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const socialLinks = [
   { name: "INSTAGRAM", className: "top-[30%] left-[15%] sm:left-[18%] md:left-[20%] rotate-[-8deg]" },
-  { name: "DRIBBBLE", className: "top-[25%] right-[10%] sm:right-[15%] md:right-[20%] rotate-[5deg]" },
-  { name: "BEHANCE", className: "top-[50%] left-[25%] sm:left-[30%] md:left-[35%] rotate-[3deg]" },
-  { name: "LINKEDIN", className: "bottom-[30%] left-[5%] sm:left-[8%] md:left-[12%] rotate-[-5deg]" },
+  { name: "TIKTOK", className: "top-[25%] right-[10%] sm:right-[15%] md:right-[20%] rotate-[5deg]" },
+  { name: "SNAPCHAT", className: "top-[50%] left-[25%] sm:left-[30%] md:left-[35%] rotate-[3deg]" },
+  { name: "THREADS", className: "bottom-[30%] left-[5%] sm:left-[8%] md:left-[12%] rotate-[-5deg]" },
   { name: "FACEBOOK", className: "bottom-[28%] right-[15%] sm:right-[20%] md:right-[25%] rotate-[-3deg]" },
 ];
 
+const emptyPills = [
+  { className: "bottom-0 left-[10%] rotate-[4deg]" },
+  { className: "bottom-0 right-[12%] rotate-[-6deg]" },
+  { className: "bottom-0 left-[30%] rotate-[7deg]" },
+  { className: "bottom-0 right-[30%] rotate-[-4deg]" },
+  { className: "bottom-0 left-[55%] rotate-[3deg]" },
+  { className: "bottom-0 right-[5%] rotate-[-5deg]" },
+  { className: "bottom-0 left-[40%] rotate-[6deg]" },
+  { className: "bottom-0 left-[5%] rotate-[-3deg]" },
+  { className: "bottom-0 left-[20%] rotate-[5deg]" },
+  { className: "bottom-0 right-[20%] rotate-[-7deg]" },
+  { className: "bottom-0 left-[50%] rotate-[4deg]" },
+  { className: "bottom-0 right-[40%] rotate-[-5deg]" },
+  { className: "bottom-0 left-[65%] rotate-[6deg]" },
+  { className: "bottom-0 right-[55%] rotate-[-4deg]" },
+  { className: "bottom-0 left-[8%] rotate-[3deg]" },
+  { className: "bottom-0 right-[8%] rotate-[-6deg]" },
+  { className: "bottom-0 left-[25%] rotate-[5deg]" },
+  { className: "bottom-0 right-[25%] rotate-[-3deg]" },
+  { className: "bottom-0 left-[45%] rotate-[7deg]" },
+  { className: "bottom-0 right-[15%] rotate-[-4deg]" },
+  { className: "bottom-0 left-[60%] rotate-[4deg]" },
+  { className: "bottom-0 left-[12%] rotate-[-5deg]" },
+  { className: "bottom-0 right-[10%] rotate-[6deg]" },
+  { className: "bottom-0 left-[35%] rotate-[-3deg]" },
+  { className: "bottom-0 right-[35%] rotate-[5deg]" },
+];
+
 export function Footer() {
+  const footerRef = useRef<HTMLDivElement>(null);
+  const pillRefs = useRef<(HTMLAnchorElement | HTMLDivElement | null)[]>([]);
+
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      const pills = pillRefs.current.filter(Boolean);
+
+      pills.forEach((pill, i) => {
+        if (!pill) return;
+
+        const startOffset = -400 - Math.random() * 400;
+        const randomX = (Math.random() - 0.5) * 500;
+
+        gsap.fromTo(
+          pill,
+          {
+            y: startOffset,
+            x: randomX,
+            rotation: (Math.random() - 0.5) * 90,
+            opacity: 0,
+          },
+          {
+            y: 0,
+            x: 0,
+            rotation: 0,
+            opacity: 1,
+            duration: 1.5 + Math.random() * 0.5,
+            ease: "bounce.out",
+            delay: i * 0.05,
+            scrollTrigger: {
+              trigger: footerRef.current,
+              start: "top 50%",
+              toggleActions: "play none none none",
+            },
+          }
+        );
+      });
+    }, footerRef);
+
+    return () => ctx.revert();
+  }, []);
+
   return (
-    <footer className="w-full bg-[#000] text-white overflow-hidden">
+    <footer ref={footerRef} className="w-full bg-[#000] text-white overflow-hidden">
       {/* Large scrolling contacts text */}
-      <div className="w-full overflow-hidden py-8 sm:py-10 md:py-14 border-b border-white/10">
+      <div className="w-full overflow-hidden py-10 sm:py-8 md:py-10 lg:py-14 border-b border-white/10">
         <div className="flex whitespace-nowrap animate-marquee">
           {Array.from({ length: 6 }).map((_, i) => (
             <span
               key={i}
-              className="font-[var(--font-oswald)] text-[60px] sm:text-[80px] md:text-[100px] lg:text-[120px] font-bold uppercase tracking-tight mx-4"
+              className="font-[var(--font-oswald)] text-[36px] xs:text-[48px] sm:text-[60px] md:text-[80px] lg:text-[100px] xl:text-[120px] font-bold uppercase tracking-tight mx-3 sm:mx-4"
             >
               Aurabelle ✦&nbsp;
             </span>
@@ -40,49 +114,49 @@ export function Footer() {
       </div>
 
       {/* Social links area */}
-      <div className="relative w-full h-[300px] sm:h-[350px] md:h-[400px]">
+      <div className="relative w-full h-[220px] sm:h-[350px] md:h-[400px]">
         {/* Decorative badge - left */}
-        <div className="absolute top-[35%] left-[8%] sm:left-[12%] w-[130px] h-[130px] sm:w-[170px] sm:h-[170px] md:w-[210px] md:h-[210px]">
+        <div className="absolute top-[10%] sm:top-[35%] left-[8%] sm:left-[12%] w-[70px] h-[70px] sm:w-[170px] sm:h-[170px] md:w-[210px] md:h-[210px]">
           <div className="relative w-full h-full rounded-full border border-white flex items-center justify-center">
             <div className="absolute inset-2 rounded-full border border-dashed border-white" />
           </div>
-          <svg className="absolute -top-2 -right-2 w-6 h-6 sm:w-8 sm:h-8 text-white" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M12 0l1.5 8.5L22 12l-8.5 1.5L12 22l-1.5-8.5L2 12l8.5-1.5z" />
-          </svg>
         </div>
 
         {/* Decorative badge - right */}
-        <div className="absolute top-[30%] right-[8%] sm:right-[12%] w-[120px] h-[120px] sm:w-[160px] sm:h-[160px] md:w-[200px] md:h-[200px]">
+        <div className="absolute top-[5%] sm:top-[30%] right-[8%] sm:right-[12%] w-[60px] h-[60px] sm:w-[160px] sm:h-[160px] md:w-[200px] md:h-[200px]">
           <div className="relative w-full h-full rounded-full border border-white flex items-center justify-center">
             <div className="absolute inset-2 rounded-full border border-dashed border-white" />
           </div>
-          <svg className="absolute -top-1 -left-1 w-5 h-5 sm:w-6 sm:h-6 text-white" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M12 0l1.5 8.5L22 12l-8.5 1.5L12 22l-1.5-8.5L2 12l8.5-1.5z" />
-          </svg>
         </div>
 
         {/* Decorative badge - center bottom */}
-        <div className="absolute bottom-[15%] left-[40%] w-[140px] h-[140px] sm:w-[180px] sm:h-[180px] md:w-[220px] md:h-[220px]">
+        <div className="absolute bottom-[5%] sm:bottom-[15%] left-[40%] w-[80px] h-[80px] sm:w-[180px] sm:h-[180px] md:w-[220px] md:h-[220px]">
           <div className="relative w-full h-full rounded-full border border-white flex items-center justify-center overflow-hidden">
             <div className="absolute inset-2 rounded-full border border-dashed border-white" />
           </div>
-          <svg className="absolute -bottom-2 -right-2 w-6 h-6 sm:w-7 sm:h-7 text-white/40" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M12 0l1.5 8.5L22 12l-8.5 1.5L12 22l-1.5-8.5L2 12l8.5-1.5z" />
-          </svg>
         </div>
 
         {/* Social pill links */}
         {socialLinks.map((link, i) => (
           <a
             key={i}
+            ref={(el) => { pillRefs.current[i] = el; }}
             href="#"
-            className={`absolute px-7 sm:px-9 md:px-12 py-3 sm:py-3.5 md:py-4 border border-white/30 rounded-full text-xs sm:text-sm md:text-base font-medium tracking-wider text-black bg-white hover:bg-black hover:text-white transition-all duration-300 ${link.className}`}
+            className={`absolute w-[80px] h-[28px] sm:w-[130px] sm:h-[45px] md:w-[160px] md:h-[50px] border border-white/30 rounded-full text-[9px] sm:text-sm md:text-base font-medium tracking-wider text-black bg-white flex items-center justify-center z-20 ${link.className}`}
           >
             {link.name}
           </a>
         ))}
-      </div>
 
+        {/* Empty pills */}
+        {emptyPills.map((pill, i) => (
+          <div
+            key={`empty-${i}`}
+            ref={(el) => { pillRefs.current[socialLinks.length + i] = el; }}
+            className={`absolute w-[18px] h-[18px] sm:w-[32px] sm:h-[32px] md:w-[40px] md:h-[40px] border border-white/30 rounded-full bg-white z-10 ${pill.className}`}
+          />
+        ))}
+      </div>
     </footer>
   );
 }
